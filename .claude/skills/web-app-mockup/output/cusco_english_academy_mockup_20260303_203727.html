@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cusco English Academy — English Tutoring for Peruvian Students</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { deep: '#1B2A4A', gold: '#D4A843', warm: '#F5E6C8', sky: '#4A90D9', terra: '#C4452D' },
+          },
+          fontFamily: {
+            heading: ['Georgia', 'serif'],
+            body: ['system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="font-body text-gray-800 bg-white">
+
+  <!-- Nav -->
+  <nav class="fixed top-0 inset-x-0 z-50 bg-brand-deep/95 backdrop-blur text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <div class="flex items-center gap-2">
+        <span class="text-2xl">📚</span>
+        <span class="font-heading text-xl font-bold tracking-tight">Cusco English Academy</span>
+      </div>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="#subjects" class="hover:text-brand-gold transition-colors">Subjects</a>
+        <a href="#tutors" class="hover:text-brand-gold transition-colors">Our Tutors</a>
+        <a href="#pricing" class="hover:text-brand-gold transition-colors">Pricing</a>
+        <a href="#testimonials" class="hover:text-brand-gold transition-colors">Testimonials</a>
+        <a href="#contact" class="bg-brand-gold text-brand-deep px-5 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition-colors">Book a Class</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative pt-16 bg-brand-deep text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+      <img src="https://images.unsplash.com/photo-1526958097901-5e6d742d3371?w=1400&q=80&fit=crop" alt="" class="w-full h-full object-cover">
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 sm:py-36 text-center">
+      <p class="text-brand-gold font-semibold text-sm tracking-widest uppercase mb-4">Cusco's #1 English Language School</p>
+      <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+        Learn English.<br class="hidden sm:block"> Transform Your Future.
+      </h1>
+      <p class="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-10">
+        Personalized English tutoring for students of all ages in Cusco. From conversational fluency to academic preparation — our expert tutors help you reach your goals.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#contact" class="bg-brand-gold text-brand-deep px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-colors">Start Learning Today</a>
+        <a href="#subjects" class="border-2 border-white/40 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors">Explore Subjects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <section class="bg-brand-gold">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-brand-deep">
+      <div>
+        <div class="text-3xl font-bold font-heading">500+</div>
+        <div class="text-sm font-medium opacity-80">Students Enrolled</div>
+      </div>
+      <div>
+        <div class="text-3xl font-bold font-heading">12</div>
+        <div class="text-sm font-medium opacity-80">Expert Tutors</div>
+      </div>
+      <div>
+        <div class="text-3xl font-bold font-heading">8</div>
+        <div class="text-sm font-medium opacity-80">Subjects Offered</div>
+      </div>
+      <div>
+        <div class="text-3xl font-bold font-heading">98%</div>
+        <div class="text-sm font-medium opacity-80">Student Satisfaction</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Subjects -->
+  <section id="subjects" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <p class="text-brand-sky font-semibold text-sm tracking-widest uppercase mb-2">What We Teach</p>
+        <h2 class="font-heading text-3xl sm:text-4xl font-bold text-brand-deep">Our Subjects</h2>
+        <p class="text-gray-500 mt-3 max-w-xl mx-auto">From beginner fundamentals to advanced exam prep — we cover every aspect of English language learning.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Subject Cards -->
+        <div class="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow border border-gray-100">
+          <div class="text-4xl mb-4">🗣️</div>
+          <h3 class="font-heading text-xl font-bold text-brand-deep mb-2">Conversational English</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Build confidence speaking English in everyday situations — ordering food, making friends, and navigating travel.</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow border border-gray-100">
+          <div class="text-4xl mb-4">📖</div>
+          <h3 class="font-heading text-xl font-bold text-brand-deep mb-2">Reading & Comprehension</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Improve your ability to read and understand English texts, from news articles to academic papers.</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow border border-gray-100">
+          <div class="text-4xl mb-4">✍️</div>
+          <h3 class="font-heading text-xl font-bold text-brand-deep mb-2">Academic Writing</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Master essay structure, grammar, and formal writing for school, university applications, and professional life.</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow border border-gray-100">
+          <div class="text-4xl mb-4">🎧</div>
+          <h3 class="font-heading text-xl font-bold text-brand-deep mb-2">Listening Skills</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Train your ear with native-speaker audio, podcasts, and real-world listening exercises at every level.</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow border border-gray-100">
+          <div class="text-4xl mb-4">🏢</div>
+          <h3 class="font-heading text-xl font-bold text-brand-deep mb-2">Business English</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Professional vocabulary, email writing, presentations, and interview skills for the workplace.</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow border border-gray-100">
+          <div class="text-4xl mb-4">🎓</div>
+          <h3 class="font-heading text-xl font-bold text-brand-deep mb-2">TOEFL Preparation</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Intensive prep for the TOEFL exam — practice tests, strategies, and targeted skill-building for top scores.</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow border border-gray-100">
+          <div class="text-4xl mb-4">🧒</div>
+          <h3 class="font-heading text-xl font-bold text-brand-deep mb-2">English for Kids</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Fun, interactive classes for children ages 5–12 using games, songs, and storytelling to make learning joyful.</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow border border-gray-100">
+          <div class="text-4xl mb-4">🌍</div>
+          <h3 class="font-heading text-xl font-bold text-brand-deep mb-2">Tourism English</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Specialized English for Cusco's tourism industry — guides, hotel staff, and anyone working with international visitors.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tutors -->
+  <section id="tutors" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <p class="text-brand-sky font-semibold text-sm tracking-widest uppercase mb-2">Meet the Team</p>
+        <h2 class="font-heading text-3xl sm:text-4xl font-bold text-brand-deep">Our Tutors</h2>
+        <p class="text-gray-500 mt-3 max-w-xl mx-auto">Native and bilingual instructors passionate about helping Cusco's students succeed.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Tutor 1 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="h-48 bg-brand-deep/10 flex items-center justify-center">
+            <div class="w-24 h-24 rounded-full bg-brand-deep text-white flex items-center justify-center text-3xl font-heading font-bold">SM</div>
+          </div>
+          <div class="p-6 text-center">
+            <h3 class="font-heading text-lg font-bold text-brand-deep">Sarah Mitchell</h3>
+            <p class="text-brand-sky text-sm font-medium mb-2">Conversational English & TOEFL</p>
+            <p class="text-gray-500 text-sm">Native speaker from Portland, Oregon. 8 years teaching in South America. CELTA certified.</p>
+          </div>
+        </div>
+        <!-- Tutor 2 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="h-48 bg-brand-deep/10 flex items-center justify-center">
+            <div class="w-24 h-24 rounded-full bg-brand-terra text-white flex items-center justify-center text-3xl font-heading font-bold">CR</div>
+          </div>
+          <div class="p-6 text-center">
+            <h3 class="font-heading text-lg font-bold text-brand-deep">Carlos Ríos</h3>
+            <p class="text-brand-sky text-sm font-medium mb-2">Business English & Writing</p>
+            <p class="text-gray-500 text-sm">Bilingual Cusqueño with an MBA from London. Specializes in professional communication and corporate training.</p>
+          </div>
+        </div>
+        <!-- Tutor 3 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="h-48 bg-brand-deep/10 flex items-center justify-center">
+            <div class="w-24 h-24 rounded-full bg-brand-gold text-brand-deep flex items-center justify-center text-3xl font-heading font-bold">EW</div>
+          </div>
+          <div class="p-6 text-center">
+            <h3 class="font-heading text-lg font-bold text-brand-deep">Emma Watson-Clarke</h3>
+            <p class="text-brand-sky text-sm font-medium mb-2">English for Kids & Listening</p>
+            <p class="text-gray-500 text-sm">British educator with 10 years in early childhood language development. Makes learning playful and memorable.</p>
+          </div>
+        </div>
+        <!-- Tutor 4 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="h-48 bg-brand-deep/10 flex items-center justify-center">
+            <div class="w-24 h-24 rounded-full bg-brand-sky text-white flex items-center justify-center text-3xl font-heading font-bold">MH</div>
+          </div>
+          <div class="p-6 text-center">
+            <h3 class="font-heading text-lg font-bold text-brand-deep">Miguel Huamán</h3>
+            <p class="text-brand-sky text-sm font-medium mb-2">Tourism English & Conversation</p>
+            <p class="text-gray-500 text-sm">Born and raised in Cusco. Former tour guide turned English teacher. Understands exactly what local students need.</p>
+          </div>
+        </div>
+        <!-- Tutor 5 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="h-48 bg-brand-deep/10 flex items-center justify-center">
+            <div class="w-24 h-24 rounded-full bg-brand-deep text-white flex items-center justify-center text-3xl font-heading font-bold">JT</div>
+          </div>
+          <div class="p-6 text-center">
+            <h3 class="font-heading text-lg font-bold text-brand-deep">James Torres</h3>
+            <p class="text-brand-sky text-sm font-medium mb-2">Academic Writing & Reading</p>
+            <p class="text-gray-500 text-sm">American-Peruvian with a Master's in Linguistics. Helps students nail university-level writing and critical reading.</p>
+          </div>
+        </div>
+        <!-- Tutor 6 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="h-48 bg-brand-deep/10 flex items-center justify-center">
+            <div class="w-24 h-24 rounded-full bg-brand-terra text-white flex items-center justify-center text-3xl font-heading font-bold">LP</div>
+          </div>
+          <div class="p-6 text-center">
+            <h3 class="font-heading text-lg font-bold text-brand-deep">Lucía Paz</h3>
+            <p class="text-brand-sky text-sm font-medium mb-2">TOEFL Prep & Grammar</p>
+            <p class="text-gray-500 text-sm">Scored 118/120 on the TOEFL. Passionate about demystifying English grammar for Spanish speakers.</p>
+          </div>
+        </div>
+        <!-- Tutor 7 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="h-48 bg-brand-deep/10 flex items-center justify-center">
+            <div class="w-24 h-24 rounded-full bg-brand-gold text-brand-deep flex items-center justify-center text-3xl font-heading font-bold">DK</div>
+          </div>
+          <div class="p-6 text-center">
+            <h3 class="font-heading text-lg font-bold text-brand-deep">David Kamau</h3>
+            <p class="text-brand-sky text-sm font-medium mb-2">Business English & Presentations</p>
+            <p class="text-gray-500 text-sm">Kenyan-born, Cusco-based. Former corporate trainer at Deloitte. Brings global business perspective to every lesson.</p>
+          </div>
+        </div>
+        <!-- Tutor 8 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="h-48 bg-brand-deep/10 flex items-center justify-center">
+            <div class="w-24 h-24 rounded-full bg-brand-sky text-white flex items-center justify-center text-3xl font-heading font-bold">AV</div>
+          </div>
+          <div class="p-6 text-center">
+            <h3 class="font-heading text-lg font-bold text-brand-deep">Ana Villanueva</h3>
+            <p class="text-brand-sky text-sm font-medium mb-2">English for Kids & Storytelling</p>
+            <p class="text-gray-500 text-sm">Cusqueña with a passion for children's literature. Uses creative storytelling to build vocabulary and confidence in young learners.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <p class="text-brand-sky font-semibold text-sm tracking-widest uppercase mb-2">Simple & Affordable</p>
+        <h2 class="font-heading text-3xl sm:text-4xl font-bold text-brand-deep">Pricing Plans</h2>
+        <p class="text-gray-500 mt-3 max-w-xl mx-auto">Flexible options designed for Cusco families and students.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="border border-gray-200 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
+          <h3 class="font-heading text-xl font-bold text-brand-deep mb-1">Individual</h3>
+          <p class="text-gray-400 text-sm mb-6">One-on-one tutoring</p>
+          <div class="mb-6"><span class="text-4xl font-bold text-brand-deep font-heading">S/. 45</span><span class="text-gray-400 text-sm"> / hour</span></div>
+          <ul class="text-sm text-gray-600 space-y-3 mb-8 text-left">
+            <li class="flex gap-2"><span class="text-brand-gold">✓</span> Personalized lesson plans</li>
+            <li class="flex gap-2"><span class="text-brand-gold">✓</span> Flexible scheduling</li>
+            <li class="flex gap-2"><span class="text-brand-gold">✓</span> Progress reports monthly</li>
+            <li class="flex gap-2"><span class="text-brand-gold">✓</span> Any subject available</li>
+          </ul>
+          <a href="#contact" class="block bg-brand-deep text-white py-3 rounded-lg font-semibold hover:bg-brand-deep/90 transition-colors">Get Started</a>
+        </div>
+        <div class="border-2 border-brand-gold rounded-2xl p-8 text-center shadow-lg relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-gold text-brand-deep text-xs font-bold px-4 py-1 rounded-full">MOST POPULAR</div>
+          <h3 class="font-heading text-xl font-bold text-brand-deep mb-1">Small Group</h3>
+          <p class="text-gray-400 text-sm mb-6">3–5 students per class</p>
+          <div class="mb-6"><span class="text-4xl font-bold text-brand-deep font-heading">S/. 25</span><span class="text-gray-400 text-sm"> / hour</span></div>
+          <ul class="text-sm text-gray-600 space-y-3 mb-8 text-left">
+            <li class="flex gap-2"><span class="text-brand-gold">✓</span> Interactive group activities</li>
+            <li class="flex gap-2"><span class="text-brand-gold">✓</span> Practice with classmates</li>
+            <li class="flex gap-2"><span class="text-brand-gold">✓</span> Twice-weekly sessions</li>
+            <li class="flex gap-2"><span class="text-brand-gold">✓</span> Free study materials</li>
+          </ul>
+          <a href="#contact" class="block bg-brand-gold text-brand-deep py-3 rounded-lg font-bold hover:bg-yellow-400 transition-colors">Get Started</a>
+        </div>
+        <div class="border border-gray-200 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
+          <h3 class="font-heading text-xl font-bold text-brand-deep mb-1">Intensive</h3>
+          <p class="text-gray-400 text-sm mb-6">4-week immersion course</p>
+          <div class="mb-6"><span class="text-4xl font-bold text-brand-deep font-heading">S/. 800</span><span class="text-gray-400 text-sm"> / month</span></div>
+          <ul class="text-sm text-gray-600 space-y-3 mb-8 text-left">
+            <li class="flex gap-2"><span class="text-brand-gold">✓</span> 20 hours per week</li>
+            <li class="flex gap-2"><span class="text-brand-gold">✓</span> All subjects included</li>
+            <li class="flex gap-2"><span class="text-brand-gold">✓</span> Certificate of completion</li>
+            <li class="flex gap-2"><span class="text-brand-gold">✓</span> TOEFL mock exams</li>
+          </ul>
+          <a href="#contact" class="block bg-brand-deep text-white py-3 rounded-lg font-semibold hover:bg-brand-deep/90 transition-colors">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-20 bg-brand-deep text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <p class="text-brand-gold font-semibold text-sm tracking-widest uppercase mb-2">What Students Say</p>
+        <h2 class="font-heading text-3xl sm:text-4xl font-bold">Student Testimonials</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white/10 backdrop-blur rounded-2xl p-8">
+          <p class="text-white/80 leading-relaxed mb-6 italic">"I went from barely understanding English menus to having full conversations with tourists in just 3 months. Sarah and Miguel are incredible teachers!"</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-brand-gold text-brand-deep flex items-center justify-center font-bold text-sm">RM</div>
+            <div>
+              <div class="font-semibold text-sm">Rosa Mamani</div>
+              <div class="text-white/50 text-xs">Hotel receptionist, 22</div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white/10 backdrop-blur rounded-2xl p-8">
+          <p class="text-white/80 leading-relaxed mb-6 italic">"Thanks to Lucía's TOEFL prep classes, I scored 105 and got accepted into a university exchange program in Canada. Life-changing!"</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-brand-sky text-white flex items-center justify-center font-bold text-sm">JP</div>
+            <div>
+              <div class="font-semibold text-sm">Jorge Puma</div>
+              <div class="text-white/50 text-xs">University student, 20</div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white/10 backdrop-blur rounded-2xl p-8">
+          <p class="text-white/80 leading-relaxed mb-6 italic">"My 7-year-old daughter asks to go to English class every day. Emma makes it so fun — she's learning without even realizing it. Best investment we've made."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-brand-terra text-white flex items-center justify-center font-bold text-sm">FC</div>
+            <div>
+              <div class="font-semibold text-sm">Fernando Condori</div>
+              <div class="text-white/50 text-xs">Parent, San Jerónimo</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / CTA -->
+  <section id="contact" class="py-20 bg-brand-warm">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-heading text-3xl sm:text-4xl font-bold text-brand-deep mb-4">Ready to Start Learning?</h2>
+      <p class="text-gray-600 text-lg mb-10">Book your free trial class today. No commitment — just come see what Cusco English Academy is all about.</p>
+      <form class="bg-white rounded-2xl shadow-lg p-8 text-left space-y-5 max-w-lg mx-auto">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+          <input type="text" placeholder="María García" class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-brand-gold focus:border-brand-gold outline-none">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+          <input type="email" placeholder="maria@email.com" class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-brand-gold focus:border-brand-gold outline-none">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Subject of Interest</label>
+          <select class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-brand-gold focus:border-brand-gold outline-none text-gray-600">
+            <option>Conversational English</option>
+            <option>Reading & Comprehension</option>
+            <option>Academic Writing</option>
+            <option>Listening Skills</option>
+            <option>Business English</option>
+            <option>TOEFL Preparation</option>
+            <option>English for Kids</option>
+            <option>Tourism English</option>
+          </select>
+        </div>
+        <button type="submit" class="w-full bg-brand-gold text-brand-deep py-3 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-colors">Book Free Trial Class</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-brand-deep text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <span class="text-2xl">📚</span>
+            <span class="font-heading text-xl font-bold">Cusco English Academy</span>
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed">Empowering Cusco's students with the English skills they need to succeed — in school, at work, and around the world.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm text-white/60">
+            <li><a href="#subjects" class="hover:text-brand-gold transition-colors">Our Subjects</a></li>
+            <li><a href="#tutors" class="hover:text-brand-gold transition-colors">Meet the Tutors</a></li>
+            <li><a href="#pricing" class="hover:text-brand-gold transition-colors">Pricing</a></li>
+            <li><a href="#testimonials" class="hover:text-brand-gold transition-colors">Testimonials</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Contact</h4>
+          <ul class="space-y-2 text-sm text-white/60">
+            <li>Av. El Sol 412, Cusco</li>
+            <li>+51 984 555 123</li>
+            <li>hello@cuscoenglish.academy</li>
+            <li>Mon–Sat: 8am – 8pm</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10 mt-10 pt-6 text-center text-xs text-white/40">
+        © 2026 Cusco English Academy. All rights reserved. This is a demo website.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

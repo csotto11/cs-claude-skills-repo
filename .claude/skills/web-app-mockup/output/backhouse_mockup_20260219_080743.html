@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>back-house</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            red: {
+              brand:  '#9B1D20',
+              dark:   '#7A1518',
+              light:  '#C7383C',
+            },
+            gray: {
+              warm:   '#F2F1EE',
+              mid:    '#8A8A8A',
+              deep:   '#3D3D3D',
+              ink:    '#1C1C1C',
+            }
+          },
+          fontFamily: {
+            serif: ['Georgia', 'Cambria', 'Times New Roman', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+
+    /* Nav transition */
+    #nav { transition: background 0.3s, box-shadow 0.3s; }
+
+    /* Grayscale-to-color image hover — mirrors the source site's effect */
+    .img-grayscale {
+      filter: grayscale(100%);
+      transition: filter 0.4s ease;
+    }
+    .img-grayscale:hover { filter: grayscale(0%); }
+
+    /* Marquee scroll for client logos */
+    @keyframes marquee {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .marquee-track { animation: marquee 18s linear infinite; }
+  </style>
+</head>
+<body class="bg-white text-gray-ink font-sans antialiased">
+
+  <!-- ─── NAV ─────────────────────────────────────────────────────────── -->
+  <nav id="nav" class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="https://back-house.us" target="_blank" rel="noopener"
+         class="font-serif text-gray-ink text-lg tracking-[0.15em] uppercase font-semibold">
+        back-house
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-deep">
+        <a href="#services" class="hover:text-red-brand transition-colors">Services</a>
+        <a href="#testimonials" class="hover:text-red-brand transition-colors">Clients</a>
+        <a href="#contact" class="hover:text-red-brand transition-colors">Contact</a>
+      </div>
+      <a href="#contact"
+         class="text-sm font-bold tracking-widest uppercase px-5 py-2 bg-red-brand text-white hover:bg-red-dark transition-colors duration-200">
+        Get in Touch
+      </a>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ──────────────────────────────────────────────────────────── -->
+  <section class="relative min-h-screen flex items-end pt-16">
+    <!-- Background image — actual Backhouse hero photo -->
+    <div class="absolute inset-0 overflow-hidden">
+      <img
+        src="https://images.squarespace-cdn.com/content/v1/6910f670a1c6bd269d3bf24b/a06dfe52-bc8d-4182-9bcc-8a3a8c77e73a/DSCF5893.jpg"
+        alt="Back-House restaurant environment"
+        class="w-full h-full object-cover object-center" />
+      <!-- Gradient overlay: dark at bottom for text legibility, lighter at top -->
+      <div class="absolute inset-0 bg-gradient-to-t from-gray-ink/90 via-gray-ink/40 to-transparent"></div>
+    </div>
+
+    <!-- Hero copy — anchored to bottom left -->
+    <div class="relative max-w-6xl mx-auto px-6 pb-20 w-full">
+      <p class="text-red-light text-xs font-bold tracking-[0.25em] uppercase mb-4">
+        NYC Restaurant Finance &amp; Strategy
+      </p>
+      <h1 class="font-serif text-white text-5xl md:text-7xl leading-tight mb-6 max-w-3xl">
+        Business Growth<br />Made Easy.
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed mb-8 max-w-xl">
+        Finance and operations-driven strategy delivering results for the city's top restaurants.
+      </p>
+      <a href="#contact"
+         class="inline-block bg-red-brand text-white text-sm font-bold tracking-widest uppercase px-8 py-4 hover:bg-red-dark transition-colors duration-200">
+        Get in Touch
+      </a>
+    </div>
+  </section>
+
+  <!-- ─── CLIENT MARQUEE ────────────────────────────────────────────────── -->
+  <section class="bg-gray-warm border-y border-gray-200 py-5 overflow-hidden">
+    <div class="flex whitespace-nowrap">
+      <div class="marquee-track flex gap-16 pr-16 text-sm font-semibold tracking-widest uppercase text-gray-mid">
+        <span>L'industrie</span>
+        <span class="text-red-brand">·</span>
+        <span>Prune</span>
+        <span class="text-red-brand">·</span>
+        <span>Margot</span>
+        <span class="text-red-brand">·</span>
+        <span>NYC Hospitality</span>
+        <span class="text-red-brand">·</span>
+        <span>Restaurant Finance</span>
+        <span class="text-red-brand">·</span>
+        <span>Growth Strategy</span>
+        <span class="text-red-brand">·</span>
+        <span>Concept Launch</span>
+        <span class="text-red-brand">·</span>
+        <!-- duplicate for seamless loop -->
+        <span>L'industrie</span>
+        <span class="text-red-brand">·</span>
+        <span>Prune</span>
+        <span class="text-red-brand">·</span>
+        <span>Margot</span>
+        <span class="text-red-brand">·</span>
+        <span>NYC Hospitality</span>
+        <span class="text-red-brand">·</span>
+        <span>Restaurant Finance</span>
+        <span class="text-red-brand">·</span>
+        <span>Growth Strategy</span>
+        <span class="text-red-brand">·</span>
+        <span>Concept Launch</span>
+        <span class="text-red-brand">·</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROBLEM STATEMENT ─────────────────────────────────────────────── -->
+  <section class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <p class="text-red-brand text-xs font-bold tracking-[0.2em] uppercase mb-5">The Problem</p>
+        <h2 class="font-serif text-3xl md:text-4xl text-gray-ink leading-snug mb-6">
+          The restaurant finance world is a mess — too many tools, too few real partners.
+        </h2>
+        <div class="w-12 h-0.5 bg-red-brand mb-6"></div>
+        <p class="text-gray-mid text-base leading-relaxed">
+          Back-House is a NYC-based team that bridges financial results with on-the-ground strategy,
+          helping restaurants grow smarter without cutting corners along the way.
+        </p>
+      </div>
+      <div class="relative overflow-hidden aspect-[4/3]">
+        <img
+          src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&q=80&fit=crop"
+          alt="Restaurant interior"
+          class="img-grayscale w-full h-full object-cover" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SERVICES ──────────────────────────────────────────────────────── -->
+  <section id="services" class="py-24 bg-gray-warm">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="mb-14">
+        <p class="text-red-brand text-xs font-bold tracking-[0.2em] uppercase mb-4">Our Services</p>
+        <h2 class="font-serif text-3xl md:text-4xl text-gray-ink max-w-xl">
+          Building Successful Restaurants Into Successful Businesses
+        </h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-gray-200">
+
+        <div class="bg-gray-warm p-8 hover:bg-white transition-colors duration-200 group">
+          <div class="w-8 h-0.5 bg-red-brand mb-6 group-hover:w-12 transition-all duration-300"></div>
+          <h3 class="font-serif text-xl text-gray-ink mb-4">CFO Services</h3>
+          <p class="text-gray-mid text-sm leading-relaxed">
+            Our foundational step — ensuring financial accuracy and identifying key areas of growth.
+          </p>
+        </div>
+
+        <div class="bg-gray-warm p-8 hover:bg-white transition-colors duration-200 group">
+          <div class="w-8 h-0.5 bg-red-brand mb-6 group-hover:w-12 transition-all duration-300"></div>
+          <h3 class="font-serif text-xl text-gray-ink mb-4">Growth Strategy</h3>
+          <p class="text-gray-mid text-sm leading-relaxed">
+            Nailing the execution of a product launch, expansion, or facilitating new partnerships.
+          </p>
+        </div>
+
+        <div class="bg-gray-warm p-8 hover:bg-white transition-colors duration-200 group">
+          <div class="w-8 h-0.5 bg-red-brand mb-6 group-hover:w-12 transition-all duration-300"></div>
+          <h3 class="font-serif text-xl text-gray-ink mb-4">Concept Launch</h3>
+          <p class="text-gray-mid text-sm leading-relaxed">
+            Taking your idea to market, from project launch through ongoing management.
+          </p>
+        </div>
+
+        <div class="bg-gray-warm p-8 hover:bg-white transition-colors duration-200 group">
+          <div class="w-8 h-0.5 bg-red-brand mb-6 group-hover:w-12 transition-all duration-300"></div>
+          <h3 class="font-serif text-xl text-gray-ink mb-4">Fundraising</h3>
+          <p class="text-gray-mid text-sm leading-relaxed">
+            Supporting capital raising through modeling, strategy, and investor outreach.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FULL-BLEED IMAGE BREAK ────────────────────────────────────────── -->
+  <div class="relative h-64 md:h-96 overflow-hidden">
+    <img
+      src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80&fit=crop"
+      alt="NYC restaurant atmosphere"
+      class="img-grayscale w-full h-full object-cover object-center" />
+    <div class="absolute inset-0 bg-gray-ink/50 flex items-center justify-center">
+      <p class="font-serif text-white text-2xl md:text-4xl text-center px-6 italic">
+        "Finance meets the floor."
+      </p>
+    </div>
+  </div>
+
+  <!-- ─── TESTIMONIALS ──────────────────────────────────────────────────── -->
+  <section id="testimonials" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="mb-14">
+        <p class="text-red-brand text-xs font-bold tracking-[0.2em] uppercase mb-4">Client Testimonials</p>
+        <h2 class="font-serif text-3xl text-gray-ink">What Our Clients Say</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <div class="border-t-2 border-red-brand pt-8">
+          <p class="text-gray-deep text-base leading-relaxed mb-8 italic font-serif">
+            "Incredibly thorough, impressively organized, and consistently dependable."
+          </p>
+          <div>
+            <p class="text-gray-ink font-semibold text-sm">Nick Baglivo</p>
+            <p class="text-red-brand text-xs tracking-widest uppercase mt-1">L'industrie</p>
+          </div>
+        </div>
+
+        <div class="border-t-2 border-red-brand pt-8">
+          <p class="text-gray-deep text-base leading-relaxed mb-8 italic font-serif">
+            "I love working with Alec... he's always on top of everything and keeps me out of jail."
+          </p>
+          <div>
+            <p class="text-gray-ink font-semibold text-sm">Gabrielle Hamilton</p>
+            <p class="text-red-brand text-xs tracking-widest uppercase mt-1">Prune</p>
+          </div>
+        </div>
+
+        <div class="border-t-2 border-red-brand pt-8">
+          <p class="text-gray-deep text-base leading-relaxed mb-8 italic font-serif">
+            "Back-House has elevated the standard for how we run and scale our businesses."
+          </p>
+          <div>
+            <p class="text-gray-ink font-semibold text-sm">Kip Green</p>
+            <p class="text-red-brand text-xs tracking-widest uppercase mt-1">Margot</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PHOTO GRID ────────────────────────────────────────────────────── -->
+  <section class="bg-gray-warm py-4 px-4">
+    <div class="max-w-6xl mx-auto grid grid-cols-3 gap-4">
+      <div class="aspect-square overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80&fit=crop"
+             alt="Restaurant dining"
+             class="img-grayscale w-full h-full object-cover" />
+      </div>
+      <div class="aspect-square overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=600&q=80&fit=crop"
+             alt="Restaurant interior"
+             class="img-grayscale w-full h-full object-cover" />
+      </div>
+      <div class="aspect-square overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=600&q=80&fit=crop"
+             alt="Restaurant food"
+             class="img-grayscale w-full h-full object-cover" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT CTA ───────────────────────────────────────────────────── -->
+  <section id="contact" class="py-28 bg-gray-ink">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <p class="text-red-light text-xs font-bold tracking-[0.2em] uppercase mb-5">Ready to Grow?</p>
+      <h2 class="font-serif text-3xl md:text-5xl text-white mb-6 leading-tight">
+        Let's Build Something<br />Together.
+      </h2>
+      <p class="text-gray-mid text-base leading-relaxed mb-10 max-w-lg mx-auto">
+        Whether you're launching a new concept or scaling an established restaurant,
+        Back-House bridges your finances with your ambitions.
+      </p>
+      <a href="https://back-house.us" target="_blank" rel="noopener"
+         class="inline-block bg-red-brand text-white text-sm font-bold tracking-widest uppercase px-10 py-4 hover:bg-red-dark transition-colors duration-200">
+        Get in Touch
+      </a>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ────────────────────────────────────────────────────────── -->
+  <footer class="bg-gray-ink border-t border-gray-deep py-8">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <span class="font-serif text-white tracking-[0.15em] uppercase text-sm">back-house</span>
+      <span class="text-gray-mid text-xs">NYC-based restaurant finance &amp; strategy</span>
+      <a href="https://back-house.us" target="_blank" rel="noopener"
+         class="text-red-light text-xs tracking-wider hover:underline">back-house.us</a>
+    </div>
+  </footer>
+
+</body>
+</html>
