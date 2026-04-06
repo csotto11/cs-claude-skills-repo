@@ -1,140 +1,205 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>The Sotto Voce</title>
+<!--[if mso]>
+<style type="text/css">
+  body, table, td { font-family: 'Segoe UI', Arial, sans-serif !important; }
+</style>
+<![endif]-->
 <style>
   /* Reset */
   body, table, td, p, a, li { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-  body { margin: 0; padding: 0; width: 100% !important; background-color: #f4f4f7; }
-  table { border-collapse: collapse; }
-  img { border: 0; outline: none; text-decoration: none; }
+  body { margin: 0; padding: 0; width: 100% !important; background-color: #f2f2f5; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; }
+  table { border-collapse: collapse; border-spacing: 0; }
+  img { border: 0; outline: none; text-decoration: none; display: block; }
+  a { color: #2563eb; text-decoration: none; }
 
-  /* Container */
-  .wrapper { width: 100%; background-color: #f4f4f7; padding: 20px 0; }
-  .container { max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  /* Preheader (hidden preview text) */
+  .preheader { display: none !important; visibility: hidden; mso-hide: all; font-size: 1px; line-height: 1px; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; }
 
-  /* Header */
-  .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); padding: 32px 24px; text-align: center; }
-  .header h1 { color: #ffffff; font-family: Georgia, 'Times New Roman', serif; font-size: 28px; margin: 0 0 4px 0; letter-spacing: 1px; }
-  .header .tagline { color: #a0a0c0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13px; margin: 0; font-style: italic; }
-  .header .edition { color: #7070a0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11px; margin: 8px 0 0 0; text-transform: uppercase; letter-spacing: 2px; }
-
-  /* Section Headers */
-  .section-header { padding: 16px 24px 8px 24px; margin-top: 8px; }
-  .section-header h2 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 18px; margin: 0; padding-bottom: 8px; border-bottom: 3px solid; }
-  .section-header.news h2 { color: #1a1a2e; border-color: #1a1a2e; }
-  .section-header.finance h2 { color: #16813d; border-color: #16813d; }
-  .section-header.sports h2 { color: #c0392b; border-color: #c0392b; }
-  .section-header.other h2 { color: #8e44ad; border-color: #8e44ad; }
-
-  /* Section Content */
-  .section-content { padding: 12px 24px 16px 24px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 15px; line-height: 1.6; color: #333333; }
-  .section-content ul { padding-left: 20px; margin: 8px 0; }
-  .section-content li { margin-bottom: 12px; }
-  .section-content strong { color: #111111; }
-  .section-content a { color: #2563eb; text-decoration: none; }
-  .section-content a:hover { text-decoration: underline; }
-
-  /* Macro Snapshot (Finance) */
-  .macro-snapshot { background-color: #f0faf4; border-left: 4px solid #16813d; padding: 12px 16px; margin: 8px 0 16px 0; border-radius: 0 4px 4px 0; font-size: 14px; }
-  .macro-snapshot .up { color: #16813d; font-weight: bold; }
-  .macro-snapshot .down { color: #c0392b; font-weight: bold; }
-
-  /* Perspective Labels */
-  .perspective { display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 2px 8px; border-radius: 3px; margin-right: 4px; }
-  .perspective.left { background-color: #dbeafe; color: #1e40af; }
-  .perspective.right { background-color: #fee2e2; color: #991b1b; }
-
-  /* Footnotes */
-  .footnotes { padding: 12px 24px; font-size: 12px; color: #888888; border-top: 1px solid #eeeeee; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; }
-  .footnotes a { color: #6b7280; }
-
-  /* Divider */
-  .divider { height: 1px; background-color: #eeeeee; margin: 0 24px; }
-
-  /* Footer */
-  .footer { background-color: #f9fafb; padding: 24px; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; color: #9ca3af; line-height: 1.6; }
-  .footer a { color: #6b7280; }
-  .footer .curated { font-style: italic; margin-top: 8px; }
-
-  /* Mobile overrides */
-  @media only screen and (max-width: 640px) {
-    .container { width: 100% !important; border-radius: 0; }
-    .header { padding: 24px 16px; }
-    .header h1 { font-size: 24px; }
-    .section-header { padding: 14px 16px 6px 16px; }
-    .section-content { padding: 10px 16px 14px 16px; font-size: 14px; }
-    .footnotes { padding: 10px 16px; }
-    .footer { padding: 20px 16px; }
-    .divider { margin: 0 16px; }
+  /* Mobile */
+  @media only screen and (max-width: 480px) {
+    .container { width: 100% !important; }
+    .mobile-padding { padding-left: 16px !important; padding-right: 16px !important; }
+    .mobile-full { width: 100% !important; }
+    .masthead-title { font-size: 22px !important; }
+    .section-label { font-size: 11px !important; }
+    .body-text { font-size: 15px !important; }
   }
 </style>
 </head>
-<body>
-<div class="wrapper">
-<div class="container">
+<body style="margin: 0; padding: 0; background-color: #f2f2f5;">
+<!-- Preheader -->
+<span class="preheader">{{PREHEADER_TEXT}}</span>
 
-  <!-- HEADER -->
-  <div class="header">
-    <h1>The Sotto Voce</h1>
-    <p class="tagline">Cutting through the noise, quietly.</p>
-    <p class="edition">{{EDITION_LABEL}}</p>
-  </div>
+<!-- Outer wrapper -->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #f2f2f5;">
+<tr><td align="center" style="padding: 24px 8px;">
 
-  <!-- NEWS -->
-  <div class="section-header news">
-    <h2>What's Going On</h2>
-  </div>
-  <div class="section-content">
-    {{NEWS_CONTENT}}
-  </div>
-  <div class="footnotes">
-    {{NEWS_FOOTNOTES}}
-  </div>
+  <!-- Container -->
+  <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" border="0" style="max-width: 600px; width: 100%; background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.06);">
 
-  <div class="divider"></div>
+    <!-- ============ MASTHEAD ============ -->
+    <tr>
+      <td style="background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #16213e 100%); padding: 36px 24px 28px 24px; text-align: center;">
+        <!-- Subtle top accent line -->
+        <table role="presentation" width="60" cellpadding="0" cellspacing="0" border="0" align="center" style="margin-bottom: 16px;">
+          <tr><td style="height: 3px; background-color: #6366f1; border-radius: 2px;"></td></tr>
+        </table>
+        <h1 class="masthead-title" style="margin: 0 0 6px 0; font-family: Georgia, 'Times New Roman', serif; font-size: 26px; font-weight: 700; color: #ffffff; letter-spacing: 0.5px;">THE SOTTO VOCE</h1>
+        <p style="margin: 0 0 10px 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size: 13px; color: #9ca3c0; font-style: italic; letter-spacing: 0.3px;">Cutting through the noise, quietly.</p>
+        <p style="margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size: 11px; color: #6b7094; text-transform: uppercase; letter-spacing: 2.5px;">{{EDITION_LABEL}}</p>
+      </td>
+    </tr>
 
-  <!-- FINANCE -->
-  <div class="section-header finance">
-    <h2>Money Moves</h2>
-  </div>
-  <div class="section-content">
-    <div class="macro-snapshot">
-      {{MACRO_SNAPSHOT}}
-    </div>
-    {{FINANCE_CONTENT}}
-  </div>
+    <!-- Spacer -->
+    <tr><td style="height: 8px; line-height: 8px; font-size: 8px;">&nbsp;</td></tr>
 
-  <div class="divider"></div>
+    <!-- ============ NEWS SECTION ============ -->
+    <tr>
+      <td class="mobile-padding" style="padding: 20px 28px 4px 28px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td style="padding-bottom: 12px; border-bottom: 2px solid #1a1a2e;">
+              <span class="section-label" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #1a1a2e;">&#9679; What's Going On</span>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td class="mobile-padding body-text" style="padding: 14px 28px 20px 28px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size: 16px; line-height: 1.6; color: #1f2937;">
+        {{NEWS_CONTENT}}
+      </td>
+    </tr>
+    <!-- News Footnotes -->
+    <tr>
+      <td class="mobile-padding" style="padding: 0 28px 16px 28px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size: 12px; line-height: 1.8; color: #9ca3af;">
+        {{NEWS_FOOTNOTES}}
+      </td>
+    </tr>
 
-  <!-- SPORTS -->
-  <div class="section-header sports">
-    <h2>The Scoreboard</h2>
-  </div>
-  <div class="section-content">
-    {{SPORTS_CONTENT}}
-  </div>
+    <!-- Divider -->
+    <tr>
+      <td style="padding: 0 28px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr><td style="height: 1px; background-color: #e5e7eb;"></td></tr>
+        </table>
+      </td>
+    </tr>
 
-  <div class="divider"></div>
+    <!-- ============ FINANCE SECTION ============ -->
+    <tr>
+      <td class="mobile-padding" style="padding: 20px 28px 4px 28px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td style="padding-bottom: 12px; border-bottom: 2px solid #16813d;">
+              <span class="section-label" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #16813d;">&#9679; Money Moves</span>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td class="mobile-padding" style="padding: 14px 28px 4px 28px;">
+        <!-- Macro Snapshot Card -->
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td style="background-color: #f0fdf4; border-left: 4px solid #16813d; padding: 14px 16px; border-radius: 0 6px 6px 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #374151;">
+              {{MACRO_SNAPSHOT}}
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td class="mobile-padding body-text" style="padding: 14px 28px 20px 28px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size: 16px; line-height: 1.6; color: #1f2937;">
+        {{FINANCE_CONTENT}}
+      </td>
+    </tr>
 
-  <!-- OTHER -->
-  <div class="section-header other">
-    <h2>What Else is Happening</h2>
-  </div>
-  <div class="section-content">
-    {{OTHER_CONTENT}}
-  </div>
+    <!-- Divider -->
+    <tr>
+      <td style="padding: 0 28px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr><td style="height: 1px; background-color: #e5e7eb;"></td></tr>
+        </table>
+      </td>
+    </tr>
 
-  <!-- FOOTER -->
-  <div class="footer">
-    <p>{{EDITION_LABEL}} &middot; {{SEND_DATE}}</p>
-    <p><a href="{{UNSUBSCRIBE_URL}}">Unsubscribe</a> &middot; <a href="mailto:christian.sottosanti@gmail.com">Reply</a></p>
-    <p class="curated">Curated by Claude &middot; Delivered by The Sotto Voce</p>
-  </div>
+    <!-- ============ SPORTS SECTION ============ -->
+    <tr>
+      <td class="mobile-padding" style="padding: 20px 28px 4px 28px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td style="padding-bottom: 12px; border-bottom: 2px solid #dc2626;">
+              <span class="section-label" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #dc2626;">&#9679; The Scoreboard</span>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td class="mobile-padding body-text" style="padding: 14px 28px 20px 28px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size: 16px; line-height: 1.6; color: #1f2937;">
+        {{SPORTS_CONTENT}}
+      </td>
+    </tr>
 
-</div>
-</div>
+    <!-- Divider -->
+    <tr>
+      <td style="padding: 0 28px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr><td style="height: 1px; background-color: #e5e7eb;"></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- ============ OTHER SECTION ============ -->
+    <tr>
+      <td class="mobile-padding" style="padding: 20px 28px 4px 28px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td style="padding-bottom: 12px; border-bottom: 2px solid #7c3aed;">
+              <span class="section-label" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #7c3aed;">&#9679; What Else is Happening</span>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td class="mobile-padding body-text" style="padding: 14px 28px 24px 28px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size: 16px; line-height: 1.6; color: #1f2937;">
+        {{OTHER_CONTENT}}
+      </td>
+    </tr>
+
+    <!-- ============ FOOTER ============ -->
+    <tr>
+      <td style="background-color: #f9fafb; padding: 24px 28px; text-align: center; border-top: 1px solid #e5e7eb;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size: 12px; color: #9ca3af; line-height: 1.8; text-align: center;">
+              <p style="margin: 0 0 6px 0; font-weight: 600; color: #6b7280;">{{EDITION_LABEL}} &#183; {{SEND_DATE}}</p>
+              <p style="margin: 0 0 10px 0;">
+                <a href="{{UNSUBSCRIBE_URL}}" style="color: #6b7280; text-decoration: underline;">Unsubscribe</a>
+                &nbsp;&#183;&nbsp;
+                <a href="mailto:christian.sottosanti@gmail.com" style="color: #6b7280; text-decoration: underline;">Reply</a>
+              </p>
+              <p style="margin: 0; font-style: italic; color: #b0b5c3;">Curated by Claude &#183; Delivered by The Sotto Voce</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+  </table>
+  <!-- /Container -->
+
+</td></tr>
+</table>
+<!-- /Outer wrapper -->
 </body>
 </html>
